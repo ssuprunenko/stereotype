@@ -10,6 +10,42 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
- *= require_tree .
- *= require_self
  */
+
+$visual-grid: true;
+$grid-columns:12;
+$gutter: 1em;
+
+@import "bourbon";
+@import "neat";
+
+section {
+  @include outer-container;
+  font-family: $lucida-grande;
+  margin-bottom: 3em;
+  background-color: #d5eefb;
+
+
+  div {
+    text-align: left;
+    padding: 1em;
+  }
+
+
+  aside, .content {
+    padding: 1em;
+    background-color: #aadbf5;
+    margin-bottom: 2em;
+  }
+
+  aside {
+    @include span-columns(3);
+    min-width: 15em;
+  }
+
+  .content {
+    @include span-columns(9);
+    @include omega();
+    min-height: 20em;
+  }
+}
