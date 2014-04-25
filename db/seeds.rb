@@ -5,3 +5,16 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+Company.create(
+  title:       'Microfirst',
+  description: 'First IT company in Hopeland',
+  location:    'Hopeland, Dreamburg',
+  worker_id:   [1]
+);
+
+Worker.create(
+  name:     'Peter van Pig',
+  age:       37,
+  position: 'CEO'
+);
