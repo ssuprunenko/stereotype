@@ -1,0 +1,32 @@
+# ~/.tmuxinator/burpee.yml
+
+name: simple_tracker
+root: ~/Dropbox/Coding/ruby-on-rails/stereotype
+
+# Optional tmux socket
+# socket_name: foo
+
+# Runs before everything. Use it to start daemons etc.
+# pre: rvm use 2.1.1
+
+# Runs in each window and pane before window/pane specific commands. Useful for setting up interpreter versions.
+# pre_window: rbenv shell 2.0.0-p247
+
+# Pass command line options to tmux. Useful for specifying a different tmux.conf.
+# tmux_options: -f ~/.tmux.mac.conf
+
+# Change the command to call tmux.  This can be used by derivatives/wrappers like byobu.
+# tmux_command: byobu
+
+windows:
+  - editor:
+      layout: even-vertical
+      panes:
+        - echo Just do it!
+        - echo zeus test spec/
+  - server:
+      layout: even-vertical
+      panes:
+        - zeus s
+        - zeus start
+  - stuff: git st
