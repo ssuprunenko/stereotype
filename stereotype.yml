@@ -1,6 +1,6 @@
 # ~/.tmuxinator/burpee.yml
 
-name: simple_tracker
+name: stereotype
 root: ~/Dropbox/Coding/ruby-on-rails/stereotype
 
 # Optional tmux socket
@@ -23,10 +23,15 @@ windows:
       layout: even-vertical
       panes:
         - echo Just do it!
-        - echo zeus test spec/
+        - echo vim stuff
+  - console:
+      layout: even-vertical
+      panes:
+        - zeus c
+        - echo Console
   - server:
       layout: even-vertical
       panes:
         - zeus s
         - zeus start
-  - stuff: git st
+  - git: git st
