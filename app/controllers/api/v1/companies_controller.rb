@@ -42,12 +42,13 @@ class Api::V1::CompaniesController < ApplicationController
     head :no_content
   end
 
-  private
-    def set_company
-      @company = Company.find(params[:id])
-    end
 
-    def company_params
-      params.require(:company).permit(:title, :description, :location, :workers)
-    end
+  private
+  def set_company
+    @company = Company.find(params[:id])
+  end
+
+  def company_params
+    params.require(:company).permit(:title, :description, :location, :workers)
+  end
 end

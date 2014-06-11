@@ -12,40 +12,56 @@
  *
  */
 
+@charset "utf-8";
+
 $visual-grid: true;
 $grid-columns:12;
 $gutter: 1em;
 
 @import "bourbon";
+@import "bitters/bitters";   /* Bitters needs to be imported before Neat */
 @import "neat";
 
 section {
   @include outer-container;
-  font-family: $lucida-grande;
-  margin-bottom: 3em;
+  text-align: center;
   background-color: #d5eefb;
 
-
-  div {
-    text-align: left;
-    padding: 1em;
-  }
-
-
-  aside, .content {
-    padding: 1em;
+  aside, &.content {
     background-color: #aadbf5;
-    margin-bottom: 2em;
   }
 
   aside {
-    @include span-columns(3);
-    min-width: 15em;
+    @include span-columns(4);
   }
 
   .content {
-    @include span-columns(9);
-    @include omega();
-    min-height: 20em;
+    padding: 1em;
+    @include span-columns(8);
+
+    .worker {
+      @include span-columns(4 of 8);
+      // height: 84%;
+      padding: 1em;
+      margin-right: 0 !important;
+
+      // background-color: white;
+      opacity: 0.9;
+
+      .circular {
+        width: 100px;
+        height: 100px;
+        border-radius: 50px;
+        -webkit-border-radius: 50px;
+        -moz-border-radius: 50px;
+        // background: url('golden_tabby_persian_kitten.jpg') no-repeat;
+        }
+
+      .circular img {
+        opacity: 0;
+        filter: alpha(opacity=0);
+        float: left;
+      }
+    }
   }
 }

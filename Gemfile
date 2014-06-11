@@ -3,18 +3,19 @@ source 'https://rubygems.org'
 ruby '2.1.1'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.1.0'
+gem 'rails', '4.1.1'
 # Use sqlite3 as the database for Active Record
 # gem 'sqlite3'
 
 # Use Ember.js as client-side MVC framwork
 gem 'active_model_serializers', :github => 'rails-api/active_model_serializers'
-gem 'ember-source', '~> 1.6.0.beta.2'
+gem 'ember-source', '~> 1.6.0.beta.3'
 gem 'es6_module_transpiler-rails', '~> 0.4.0'
 gem 'ember-appkit-rails', github: 'dockyard/ember-appkit-rails'
 
 gem 'sqlite3'
 gem 'neat'
+gem 'bitters'
 
 group :development, :test do
   gem 'factory_girl'
