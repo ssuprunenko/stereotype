@@ -5,13 +5,6 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
 
-  namespace :api do
-    namespace :v1 do
-      resources :companies
-      resources :workers
-    end
-  end
-
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
@@ -60,7 +53,4 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
-
-  # Uncomment when using 'history' as the location in Ember's router
-  get '*foo', :to => 'landing#index'
 end
